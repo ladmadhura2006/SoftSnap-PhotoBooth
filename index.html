@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SoftSnap Mini</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="booth-wrapper">
+    <div class="camera-sector">
+        <div class="digi-body">
+            <div class="lens-detail">SCENE SELECT: FUJI-CAM</div>
+            
+            <div class="viewfinder" id="flashArea">
+                <div id="countdown"></div>
+                
+                <video id="Camera" autoplay playsinline></video>
+                <div class="date-overlay" id="screenDate"></div>
+            </div>
+
+            <div class="physical-buttons">
+                <div class="power-group">
+                    <div id="pwrLight" class="light"></div>
+                    <button id="powerBtn">ON/OFF</button>
+                </div>
+                <div class="shutter-group">
+                    <button id="snapBtn">SHUTTER</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="lab-sector">
+        <div class="lab-header">
+            <h2>SoftSnap <span>PhotoBooth</span></h2>
+            <input id="captionInput" type="text" placeholder="CUTE CAPTIONSS...">
+        </div>
+
+        <div class="film-tray">
+            <canvas id="photo"></canvas>
+            <div id="placeholderText">Waiting for session...</div>
+        </div>
+
+        <button id="saveBtn" class="download-btn">SAVE YOUR MEMORIES💞</button>
+    </div>
+</div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

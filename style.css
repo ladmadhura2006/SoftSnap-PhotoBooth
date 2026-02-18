@@ -1,0 +1,145 @@
+:root {
+    --silver: #d1d1d1;
+    --brushed: linear-gradient(145deg, #e6e6e6, #bcbcbc);
+    --lcd-black: #121212;
+    --fuji-orange: #ff8c00;
+}
+
+body {
+    margin: 0; background-color: #e0e0e0;
+    font-family: 'Courier New', Courier, monospace;
+    height: 100vh; overflow: hidden;
+}
+
+.booth-wrapper { 
+    display: flex; 
+    height: 100vh; 
+}
+
+.camera-sector {
+    flex: 1.2; display: flex; justify-content: center; align-items: center;
+    background: radial-gradient(circle, #f0f0f0 0%, #d8d8d8 100%);
+}
+
+.digi-body {
+    background: var(--brushed);
+    padding: 40px; border-radius: 50px;
+    border: 4px solid #a1a1a1;
+    box-shadow: 20px 20px 60px #bebebe, -20px -20px 60px #ffffff;
+    width: 500px;
+}
+
+.viewfinder {
+    background: #000;
+    position: relative;
+    border: 10px solid #222;
+}
+
+#Camera { 
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover; 
+    filter: sepia(0.2) contrast(1.1); }
+
+.physical-buttons {
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    margin-top: 25px;
+}
+
+.light { 
+    width: 10px; 
+    height: 10px; 
+    background: #444; 
+    border-radius: 50%; 
+    margin-bottom: 5px; 
+}
+
+.light.on { 
+    background: #00ff00;
+    box-shadow: 0 0 10px #0ff; 
+}
+
+button#powerBtn {
+    background: #444; color: white; border: none; padding: 10px 15px; border-radius: 5px; cursor: pointer;
+}
+
+#snapBtn {
+    width: 80px; height: 80px; border-radius: 50%;
+    background: radial-gradient(#eee, #999);
+    border: 4px solid #888; cursor: pointer;
+    box-shadow: inset 2px 2px 5px #fff, 4px 4px 10px rgba(0,0,0,0.2);
+}
+
+#snapBtn:active { 
+    transform: scale(0.95); 
+    box-shadow: inset 4px 4px 10px #666; 
+}
+
+.lab-sector {
+    flex: 0.8; 
+    background: #fff; 
+    padding: 30px;
+    display: flex; 
+    flex-direction: column; 
+    border-left: 2px solid #ccc;
+    height: 100vh; 
+    box-sizing: border-box;
+}
+
+.film-tray {
+    flex-grow: 1; 
+    background: #e5e5e5; 
+    border-radius: 15px;
+    margin: 20px 0; 
+    display: flex; 
+    flex-direction: column;
+    align-items: center; 
+    
+    /*Scrollbar*/
+    overflow-y: auto; 
+    padding: 40px 20px;
+    border: 2px inset #d1d1d1;
+    
+    scrollbar-width: thin;
+    scrollbar-color: #888 #eee;
+}
+
+#photo { 
+    max-width: 100%; 
+    height: auto; 
+    display: none; 
+    filter: drop-shadow(0 10px 20px rgba(0,0,0,0.2));
+    margin-bottom: 20px; 
+}
+
+.film-tray::-webkit-scrollbar {
+    width: 8px;
+}
+
+.film-tray::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 10px;
+}
+
+.download-btn {
+    background: #222; color: white; border: none; padding: 20px;
+    border-radius: 10px; cursor: pointer; font-weight: bold;
+}
+
+/*timer*/
+
+#countdown {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 110px; 
+    font-weight: bold;
+    z-index: 100;
+    text-shadow: 0 0 20px rgba(0,0,0,0.8);
+    pointer-events: none;
+    font-family: 'Arial', sans-serif; 
+}
